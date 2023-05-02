@@ -1,0 +1,61 @@
+package Test;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Movie
+            {
+
+	            ArrayList<String> list=new ArrayList<>();
+	            Scanner sc = new Scanner(System.in);
+	            public int nummovies;
+	            public void addmovies(int n)
+	            {
+	                System.out.println("Enter movies");
+	                for (int i=0;i<=n;i++)
+	                {
+	                    String mv=sc.next();
+	                    list.add(mv);
+	                }
+	            }
+	            public void search(String s)
+	            {
+	                if (list.contains(s))
+	                {
+	                    System.out.println("Movie Searching");
+	                }
+	                else
+	                {
+	                	System.out.println("Movie not found");
+	                }
+	            }
+	            public void delete(String s)
+	            {
+	                if (list.contains(s))
+	                {
+	                    list.remove(s);
+	                    System.out.println(" movie removed");
+
+	                }
+	            }
+	            public void show()
+	            {
+	                System.out.println(list);
+	            }
+
+	        public static void main(String[] args)
+	        {
+
+	            Scanner sc = new Scanner(System.in);
+	            Movie m = new Movie();
+	            System.out.println("Enter the number of movies");
+	            int n = sc.nextInt();
+	            m.addmovies(n);
+             m.delete("abc");
+	            m.show();
+	            m.search("xyz");
+
+	        }
+}
+
+
+
