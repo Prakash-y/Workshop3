@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class Merge
+{
+   public static void main(String[] args) {
+	   ArrayList a = new ArrayList();
+		a.add(10);
+		a.add(20);
+		a.add(30);
+		
+		System.out.println(a);
+		
+	ArrayList a2 = new ArrayList();
+	a2.add(40);
+	a2.add(50);
+	a2.add(60);
+	a2.addAll(a);
+	
+	ArrayList a3 = new ArrayList();
+	a3.addAll(a2);
+	System.out.println(a3);
+	 
+	
+		
+		
+}
+}
