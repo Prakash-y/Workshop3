@@ -1,0 +1,60 @@
+package Review12;
+
+import java.util.Arrays;
+
+public class ArrayZero 
+{
+	public static void main(String[] args) {
+   int a [] = {0,3,2,5,0,7};
+    int  countNonZero = 0;
+    for(int i =0; i<a.length; i++)
+    {
+    	if(a[i]!=0)
+    	{
+    		countNonZero++;
+    	}
+    }
+   // Arrays.sort(a);
+    for(int k =0; k<a.length; k++)
+    {
+    	for(int m=k+1; m<a.length; m++)
+    	{
+    		int temp =0;
+    		if(a[k]>a[m])
+    		{
+    			 temp = a[k];
+    			a[k] = a[m];
+    			a[m] = temp;
+    		}
+    	}
+    }
+    
+    System.out.println(Arrays.toString(a));
+   
+    int[] nonZero = new int[countNonZero];
+    int[] zero = new int [a.length];
+    
+    int NonZero =0;
+    int Zero = 0;
+     
+    for(int i =0; i<a.length; i++)
+    {
+    	if(a[i]!=0)
+    	{
+    		nonZero[NonZero++]=a[i];
+    	}
+    	else
+    	{
+    		zero[Zero++]=a[i];
+    	}
+    }
+    System.out.println("Counting non zero elements :"+ countNonZero);
+    for(int i =0; i<nonZero.length; i++)
+    {
+    	System.out.println(nonZero[i]+" ");
+    }
+   
+  
+   
+}
+}
